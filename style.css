@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* =========================
+   RESET
+========================= */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* =========================
+   BASE
+========================= */
+html,
+body {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-image: url(./gora_les_temnyj_141603_1920x1080.jpg);
+    color: #333;
+
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 10px;
+}
+
+.container { 
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.container h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+
+    background-image: linear-gradient(to bottom, #000000, #000000, rgb(146, 146, 146));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    background: rgba(24, 24, 24, 0.26);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.363);
+    border-top: none;
+    padding: 18px;
+    margin: 10px;
+    border-radius:30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;           /* 🔥 вместо 755px */
+    max-width: 650px;      /* ограничение */
+    overflow: hidden;      /* чтобы не вылезало */
+}
+
+#admin-form input {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   LINKS
+========================= */
+.card a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18x;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #0004ff;
+}
+
+.card h2 {
+    background-image: linear-gradient(to right, #ffffff 0%, #eeeeee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   FORMS
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #111;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background: #ebebeb;
+    font-size: 14px;
+    color: #000000;
+    max-width: 100%;
+}
+
+textarea:hover {
+    background: #ffffff;
+}
+
+select:hover {
+    background: #000000bb;
+}
+
+input:hover {
+    background: #ffffff;
+}
+
+select {
+    appearance: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.774);
+    color: #ccc;
+    border-radius: 10px;
+}
+
+option {
+    appearance: none;
+    background: rgb(255, 255, 255);
+    color: #111;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4c8bf5;
+    box-shadow: 0 0 0 2px rgba(76, 139, 245, 0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #3a3a3a;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s;
+    box-shadow: 0 0 10px #000000;
+    width: 100%;
+}
+
+button:hover {
+    background: #333333;
+    color: #ffffff;
+    transform: translateY(-1px) scale(0.99, 0.99);
+    box-shadow: none;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   TABLE (DESKTOP + MOBILE SCROLL)
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgba(255, 255, 255, 0.192);
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 14px;
+    margin-top: 10px;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+thead {
+    background: #222222c9;
+
+}
+
+th,
+td {
+    padding: 4px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    border-right: 2px solid rgba(255, 255, 255, 0.055);
+}
+
+tr:hover {
+    background: #cfdfff5d;
+}
+tr td {
+    padding-left: 10px;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+.badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.badge-new {
+    background: #e7f1ff;
+    color: #2f6df6;
+}
+
+.badge-progress {
+    background: #fff4e5;
+    color: #d48806;
+}
+
+.badge-done {
+    background: #e6f9f0;
+    color: #1a9c5a;
+}
+
+/* =========================
+   ADMIN BAR
+========================= */
+.admin-bar {
+    width: 646px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: #ffffff;
+    background: rgba(41, 41, 41, 0.63);
+}
+.admin-bar button {
+    width: 150px;
+    box-shadow: none;
+}
+.admin-bar span {
+    color: #d4d4d4;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================
+   ALERTS
+========================= */
+.alert {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background: #e6f9f0;
+    color: #1a9c5a;
+}
+
+.alert-error {
+    background: #ffe6e6;
+    color: #d93025;
+}
+
+/* =========================
+   TABLE SCROLL FIX (ONLY MOBILE)
+========================= */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .container {
+        margin-top: -10px;
+        border-radius: none;
+        background: #1111113b;
+    }
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .card {
+        background: #1111113b;  
+        padding: 14px;
+        width: 310px;
+        border-top: none;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .admin-bar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        width: 297px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 13px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: rgb(34, 34, 34);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.close {
+    font-size: 22px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.card p {
+    color:rgb(255, 255, 255);
+}
+footer {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    color: #ccc;
+    padding-top: 40px;
+    margin-top: 150px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-left h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-btn {
+    border: 1px solid #ffc400;
+    background: transparent;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    background: #00a2d3;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-col h4 {
+    color: #fff347;
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* 📱 адаптив */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 310px) {
+
+    .card {
+        width: 250px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    button {
+        font-size: 11px;
+    }
+}
